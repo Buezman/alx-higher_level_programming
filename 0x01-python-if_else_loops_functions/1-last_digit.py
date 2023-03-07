@@ -7,7 +7,7 @@ if number < 0:
     sign = "-"
 last_digit = number % 10
 end = ""
-if last_digit > 5:
+if last_digit > 5 and sign != "-":
     end += "greater than 5"
 elif last_digit == 0:
     end += "0"

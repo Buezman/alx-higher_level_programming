@@ -9,4 +9,4 @@ elif last_digit == 0:
     sign = "0"
 else:
     sign = "less than 6 and not 0"
-print(f"Last digit of {number} is {last_digit} and is {}")
+print(f"Last digit of {number} is {last_digit} and is {sign}")

@@ -14,14 +14,10 @@ if __name__ == "__main__":
     a = int(sys.arg[1])
     b = int(sys.arg[3])
 
-    if sys.argv[2] == "+":
-        print("{} + {} = {}".format(a, b, add(a, b)))
-    elif sys.argv[2] == "-":
-        print("{} - {} = {}".format(a, b, sub(a, b)))
-    elif sys.argv[2] == "*":
-        print("{} * {} = {}".format(a, b, mul(a, b)))
-    elif sys.argv[2] == "/":
-        print("{} / {} = {}".format(a, b, div(a, b)))
-    else:
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
+
+    if sys.argv[2] in list(ops.keys()):
+        print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
+    elif:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)

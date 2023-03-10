@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     if sys.argv[2] in list(ops.keys()):
         print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
-    elif:
+    else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)

@@ -11,8 +11,8 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    a = sys.arg[1]
-    b = sys.arg[3]
+    a = int(sys.arg[1])
+    b = int(sys.arg[3])
 
     if sys.argv[2] == "+":
         print("{} + {} = {}".format(a, b, add(a, b)))

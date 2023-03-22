@@ -10,6 +10,6 @@ def best_score(a_dictionary):
     for k, v in a_dictionary.items():
         if v > score:
             best = k
-            score = k
+            score = v
 
     return best

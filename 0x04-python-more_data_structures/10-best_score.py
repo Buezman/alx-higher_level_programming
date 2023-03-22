@@ -5,7 +5,7 @@ def best_score(a_dictionary):
         return None
 
     best = list(a_dictionary.keys())[0]
-    score = a_dictionary[first]
+    score = a_dictionary[best]
 
     for k, v in a_dictionary.items():
         if v > score:

@@ -5,13 +5,13 @@
 
 class Rectangle:
     """Describes a rectangle object"""
-    
-    def __init__(self, width, heigth):
+
+    def __init__(self, width=0, height=0):
         """Initialize a new Rectangle
 
         Args:
             width (int): Width of new Rectangle
-            heigth (int): Height of new Rectangle
+            height (int): Height of new Rectangle
         """
         self.width = width
         self.height = height
@@ -31,15 +31,15 @@ class Rectangle:
         self.__width = val
 
     @property
-    def heigth(self):
-        """Getter for heigth"""
-        return self.__heigth
+    def height(self):
+        """Getter for height"""
+        return self.__height
 
-    @heigth.setter
-    def heigth(self, val):
+    @height.setter
+    def height(self, val):
         """sets the height"""
         if not isinstance(val, int):
-            raise TypeError("heigth must be an integer")
+            raise TypeError("height must be an integer")
         elif val < 0:
-            raise ValueError("heigth must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = val

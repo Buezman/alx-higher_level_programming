@@ -21,7 +21,7 @@ class Square:
                 not all(isinstance(num, int) for num in position) or
                 not all(num >= 0 for num in position)):
             error = "position must be a tuple of two positive integers"
-            raise TypeError(error)
+            raise TypeError("{}".format(error))
         self.__size = size
         self.__position = position
 
@@ -56,7 +56,7 @@ class Square:
                 not all(isinstance(num, int) for num in val) or
                 not all(num >= 0 for num in val)):
             err = "position must be a tuple of two positive integers"
-            raise TypeError(err)
+            raise TypeError("{}".format(err))
         self.__position = val
 
     def my_print(self):

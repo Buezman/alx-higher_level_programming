@@ -12,16 +12,6 @@ class Square:
         Args:
             size(int): length of side of new square
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        if (not isinstance(position, tuple) or
-                len(position) != 2 or
-                not all(isinstance(num, int) for num in position) or
-                not all(num >= 0 for num in position)):
-            error = "position must be a tuple of two positive integers"
-            raise TypeError("{}".format(error))
         self.__size = size
         self.__position = position
 
@@ -65,7 +55,7 @@ class Square:
             print("")
             return
 
-        [print("") for i in range(0, self.__position[1])]
+        [print("") for x in range(0, self.__position[1])]
         for i in range(0, self.__size):
             [print(" ", end="") for n in range(0, self.__position[0])]
             [print("#", end="") for j in range(0, self.__size)]

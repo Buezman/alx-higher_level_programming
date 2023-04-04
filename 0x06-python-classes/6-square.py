@@ -42,7 +42,7 @@ class Square:
     def position(self, val):
         """updates the position of the square"""
         if (not isinstance(val, tuple) or
-                len(position) != 2 or
+                len(val) != 2 or
                 not all(isinstance(num, int) for num in val) or
                 not all(num >= 0 for num in val)):
             err = "position must be a tuple of two positive integers"

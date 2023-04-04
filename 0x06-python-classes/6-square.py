@@ -46,7 +46,7 @@ class Square:
                 not all(isinstance(num, int) for num in val) or
                 not all(num >= 0 for num in val)):
             err = "position must be a tuple of two positive integers"
-            raise TypeError("{}".format(err))
+            raise TypeError(err)
         self.__position = val
 
     def my_print(self):

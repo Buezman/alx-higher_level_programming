@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 # 100-safe_print_integer_err.py
 
+import sys
+
+
 def safe_print_integer_err(value):
     """Prints an integer.
 

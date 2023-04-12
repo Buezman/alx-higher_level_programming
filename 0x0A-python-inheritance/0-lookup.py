@@ -1,4 +1,4 @@
-#!/usr/bin/py
+#!/usr/bin/python3
 # 0-lookup.py
 """Describes a function that lists the attributes of an object"""
 

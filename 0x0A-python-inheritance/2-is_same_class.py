@@ -3,7 +3,7 @@
 """Defines a function for validating class type"""
 
 
-def is_smae_class(obj, a_class):
+def is_same_class(obj, a_class):
     """Checks if obj is instance of given class types.
 
     Args:

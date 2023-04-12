@@ -30,4 +30,4 @@ class Rectangle(BaseGeometry):
         shape = str(self.__class__.__name__)
         w = self.__width
         h = self.__height
-        return "[{}: {}/{}".format(shape, w, h)
+        return "[{}] {}/{}".format(shape, w, h)

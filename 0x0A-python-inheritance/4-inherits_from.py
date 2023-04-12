@@ -9,7 +9,7 @@ def inherits_from(obj, a_class):
     Args:
         obj (any): object to validate
         a_class (type): class to validate against
-    
+
     Returns:
         If class type of obj is subclass of a_class - True
         Otherwise - False

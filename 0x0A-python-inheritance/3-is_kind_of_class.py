@@ -4,8 +4,8 @@
 
 
 def is_kind_of_class(obj, a_class):
-    """Checks if obj is an instance of or inherits a_class
-    
+    """Checks if obj is an instance of or inherits a_class.
+
     Args:
         obj (any): object to be checked
         a_class (type): class to be checked against

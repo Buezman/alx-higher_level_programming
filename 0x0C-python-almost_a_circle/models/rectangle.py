@@ -18,7 +18,7 @@ class Rectangle(Base):
             id (int): id of new Rectangle from Base class
         """
         self.width = width
-        self.heigth = height
+        self.height = height
         self.x = x
         self.y = y
         super().__init__(id)
@@ -76,3 +76,20 @@ class Rectangle(Base):
         if val < 0:
             raise ValueError("x must be >= 0")
         self.__y = val
+
+    def area(self):
+        """calculate the area of a rectangle"""
+        return self.width * self.height
+
+    def display(self):
+        """prints Rectangle instance with the # character"""
+
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")

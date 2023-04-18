@@ -31,7 +31,7 @@ class Base:
         """returns JSON string representation of a list of dictionaries
 
         Args:
-            list_dictionaries (list): list of dctionaries
+            list_dictionaries (list): list of dictionaries
         """
         if list_dictionaries is None or list_dictionaries = []:
             return "[]"

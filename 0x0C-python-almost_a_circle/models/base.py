@@ -2,6 +2,7 @@
 # base.py
 """Base class"""
 import json
+import csv
 
 
 class Base:
@@ -40,3 +41,19 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Writes JSON string of list_objs to a file.
+
+        Args:
+            cls (string): filename
+            list_objs (list): list of objects
+        """
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as f:
+            if list_objs is None or list_objs == []:
+                f.write("[]")
+            else:
+                dicts = [i.to_dictionary() for i in list_objs]
+                f.write(Base.to_json_string(dicts))

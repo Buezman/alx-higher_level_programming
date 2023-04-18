@@ -72,9 +72,9 @@ class Rectangle(Base):
     @y.setter
     def y(self, val):
         if not isinstance(val, int):
-            raise TypeError("x must be an integer")
+            raise TypeError("y must be an integer")
         if val < 0:
-            raise ValueError("x must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = val
 
     def area(self):

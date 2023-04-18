@@ -57,3 +57,18 @@ class Base:
             else:
                 dicts = [i.to_dictionary() for i in list_objs]
                 f.write(Base.to_json_string(dicts))
+
+    @classmethod
+    def from_json_string(json_string):
+        """Returns list of JSON string representation
+
+        Args:
+            json_string (string): JSON string
+
+        Returns:
+            if json_string is None or empty - []
+            else - a list representation of json_string
+        """
+        if json_string is None or json_string == "[]":
+            return []
+        else return json.loads(json_string)

@@ -40,7 +40,7 @@ class Square(Rectangle):
     def update(self, *args):
         """Updates the attributes of a Square
 
-        *args (integers): new attributes for square object
+        *args (ints): new attributes for square object
             - arg1 is the id attribute
             - arg2 is the size attribute
             - arg3 is the x attribute
@@ -62,7 +62,6 @@ class Square(Rectangle):
                 elif a == 3:
                     self.y = arg
                 a += 1
-
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":

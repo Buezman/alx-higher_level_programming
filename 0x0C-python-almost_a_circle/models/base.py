@@ -125,7 +125,7 @@ class Base:
                 for o in list_objs:
                     writer.writerow(o.to_dictionary())
 
-    @class_method
+    @classmethod
     def load_from_file_csv(cls):
         """Return a list of classes instantiated from a CSV file.
 

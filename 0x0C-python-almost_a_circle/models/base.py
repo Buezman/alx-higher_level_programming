@@ -140,9 +140,8 @@ class Base:
                     attr = ["id", "width", "height", "x", "y"]
                 else:
                     attr = ["id", "size", "x", "y"]
-                dicts = csv.DictReader(csvfile, fieldnames=attr)
-                dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in dicts]
-                return [cls.create(**d) for d in dicts]
+                dic = csv.DictReader(csvfile, fieldnames=attr)
+                dic = [dict([k, int(v)] for k, v in d.items()) for d in dic]
+                return [cls.create(**d) for d in dic]
         except IOError:
             return []

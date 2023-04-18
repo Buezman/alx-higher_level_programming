@@ -16,7 +16,7 @@ class Square(Rectangle):
             y (int): y co-ordinate of square
             id (int): id of square
         """
-        super().__init__(size, size, x, y, y, id)
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """Overrides the str() method"""

@@ -103,3 +103,24 @@ class Base:
                 return [cls.create(**d) for d in dicts]
         except IOError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save a list of instances to CSV file
+
+        Args:
+            cls (class): class type
+            list_objs (list): list of instances
+        """
+        filename = str(cls.__name__) + ".csv"
+        with open(filename, "w") as csvfile:
+            if list_objs is None or list_objs == []:
+                csvfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    attr = ["id", "width", "height", "x", "y"]
+                else:
+                    attr = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=attr)
+                for o in list_objs:
+                    writer.writerow(o.to_dictionary())

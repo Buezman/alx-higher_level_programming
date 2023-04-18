@@ -112,7 +112,7 @@ class Base:
             cls (class): class type
             list_objs (list): list of instances
         """
-        filename = str(cls.__name__) + ".csv"
+        filename = cls.__name__ + ".csv"
         with open(filename, "w") as csvfile:
             if list_objs is None or list_objs == []:
                 csvfile.write("[]")

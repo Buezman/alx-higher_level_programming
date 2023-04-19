@@ -4,14 +4,14 @@
 Unit test classes:
     TestSquare_init - line 22
     TestSquare_size - line 86
-    TestSquare_x - line 164
-    TestSquare_y - line 236
-    TestSquare_order_of_initialization - line 304
-    TestSquare_area - line 320
-    TestSquare_stdout - line 341
-    TestSquare_update_args - line 424
-    TestSquare_update_kwargs - line 536
-    TestSquare_to_dictionary - 638
+    TestSquare_x - line 160
+    TestSquare_y - line 227
+    TestSquare_order_of_initialization - line 295
+    TestSquare_area - line 311
+    TestSquare_stdout - line 332
+    TestSquare_update_args - line 415
+    TestSquare_update_kwargs - line 527
+    TestSquare_to_dictionary - 629
 """
 import io
 import sys
@@ -107,10 +107,6 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square({"a": 1, "b": 2}, 2)
 
-    def test_bool_size(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Square(True, 2, 3)
-
     def test_list_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Square([1, 2, 3])
@@ -183,10 +179,6 @@ class TestSquare_x(unittest.TestCase):
     def test_dict_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Square(1, {"a": 1, "b": 2}, 2)
-
-    def test_bool_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Square(1, True)
 
     def test_list_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):

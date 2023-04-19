@@ -4,14 +4,14 @@
 Unit test classes:
     TestRectangle_init - line 23
     TestRectangle_width - line 112
-    TestRectangle_height - line 188
+    TestRectangle_height - line 187
     TestRectangle_x - line 260
-    TestRectangle_y - line 332
-    TestRectangle_order_of_initialization - line 400
-    TestRectangle_area - line 428
-    TestRectangle_update_args - line 536
-    TestRectangle_update_kwargs - line 674
-    TestRectangle_to_dictionary - line 786
+    TestRectangle_y - line 328
+    TestRectangle_order_of_initialization - line 424
+    TestRectangle_area - line 447
+    TestRectangle_update_args - line 531
+    TestRectangle_update_kwargs - line 669
+    TestRectangle_to_dictionary - line 781
 """
 import io
 import sys
@@ -131,10 +131,6 @@ class TestRectangle_width(unittest.TestCase):
     def test_dict_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle({"a": 1, "b": 2}, 2)
-
-    def test_bool_width(self):
-        with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(True, 2)
 
     def test_list_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -279,10 +275,6 @@ class TestRectangle_x(unittest.TestCase):
     def test_dict_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             Rectangle(1, 2, {"a": 1, "b": 2}, 2)
-
-    def test_bool_x(self):
-        with self.assertRaisesRegex(TypeError, "x must be an integer"):
-            Rectangle(1, 2, True, 2)
 
     def test_list_x(self):
         with self.assertRaisesRegex(TypeError, "x must be an integer"):

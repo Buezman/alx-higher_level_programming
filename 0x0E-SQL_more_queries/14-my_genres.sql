@@ -4,5 +4,5 @@ JOIN tv_shows_genres sg
 ON (g.id = sg.genre_id)
 JOIN tv_shows s
 ON (s.id = sg.show_id)
-WHERE s.name = 'Dexter'
+WHERE s.title = 'Dexter'
 ORDER BY g.name ASC;

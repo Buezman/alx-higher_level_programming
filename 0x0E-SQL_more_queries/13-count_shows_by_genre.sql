@@ -4,5 +4,5 @@ FROM tv_genres g
 JOIN tv_show_genres sg
 ON (g.id = sg.genre_id)
 WHERE number_of_shows > 0
-GROUP BY sg.genre_id
-ORDER BY number_of_shows;
+GROUP BY genre
+ORDER BY number_of_shows DESC;
